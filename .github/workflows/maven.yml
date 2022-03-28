@@ -28,13 +28,13 @@ jobs:
 
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
-    with:
-      image: rakeshmadikanti/springboot-image-new
-      tags: latest
-      registry: docker.io
-      dockerfile: Dockerfile
-      username: ${{ secrets.DOCKER_USERNAME }}
-      password: ${{ secrets.DOCKER_PASSWORD }}
+      with:
+        image: rakeshmadikanti/springboot-image-new
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
 # secrets is a github feature which stores the userame and passwords in repository > settings > Secrets path
 
